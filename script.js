@@ -28,7 +28,7 @@ let date = document.querySelector('.date');
 date.innerText = dateToday(Now);
 
 let temp = document.querySelector('#WheaterNowDegrees')
-temp.innerText = `${(weather.main.temp)}`;
+temp.innerText = `${Math.round(weather.main.temp*10)/10}`;
 
 let weatherword = document.querySelector('.WhetherNowWord');
 weatherword.innerText = weather.weather[0].main;
